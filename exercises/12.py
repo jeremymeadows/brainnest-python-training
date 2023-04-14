@@ -9,8 +9,9 @@
 
 file = open(input('Enter a file name: '))
 
-emails = [line.split()[1]
-          for line in file.readlines() if line.startswith('From:')]
+emails = [
+    line.split()[1] for line in file.readlines() if line.startswith('From:')
+]
 for email in emails:
     print('Sender:', email)
 print('Total number of lines:', len(emails))
